@@ -58,7 +58,32 @@ The main README.md, the modules README.md and the examples README.md are populat
 To view examples for how you can leverage this module, please see the [examples](examples/) directory.
 
 <!-- BEGIN_TF_DOCS -->
+## Requirements
 
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
+| <a name="requirement_equinix"></a> [equinix](#requirement\_equinix) | >= 1.8.0 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
 <!-- END_TF_DOCS -->
 ## Contributing
 

@@ -17,10 +17,10 @@ data "equinix_metal_organization" "org" {
   organization_id = var.organization_id
 }
 
-module "project-invite-setup" {
+module "project_invite_setup" {
   for_each        = { for user in local.users : trimspace(user.email) => user }
   source          = "../collaborator-project"
   organization_id = data.equinix_metal_organization.org.id
   collaborator    = each.value.email
-  metal_api_token = var.metal_api_token
+  send_invites    = var.send_invites
 }

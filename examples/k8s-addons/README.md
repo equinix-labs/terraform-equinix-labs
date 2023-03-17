@@ -23,9 +23,7 @@ No providers.
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_example"></a> [example](#module\_example) | ../../ | n/a |
+No modules.
 
 ## Resources
 
@@ -33,15 +31,9 @@ No resources.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_example_metal_auth_token"></a> [example\_metal\_auth\_token](#input\_example\_metal\_auth\_token) | The example auth token value defines what will be included in the example resource in main.tf. This example is descriptive. | `string` | n/a | yes |
-| <a name="input_example_metal_project_id"></a> [example\_metal\_project\_id](#input\_example\_metal\_project\_id) | The example project id value defines what will be included in the example resource in main.tf. This example is descriptive. | `string` | n/a | yes |
+No inputs.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_example_device_hostname"></a> [example\_device\_hostname](#output\_example\_device\_hostname) | The example output. In practice, output value reference implicit resource attributes declared in main.tf |
-| <a name="output_example_gateway_id"></a> [example\_gateway\_id](#output\_example\_gateway\_id) | The example output. In practice, output value reference implicit resource attributes declared in main.tf |
+No outputs.
 <!-- END_TF_DOCS -->

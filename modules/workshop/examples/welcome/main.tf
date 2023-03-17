@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "equinix" {
-  auth_token = var.workshop_metal_api_token
+  auth_token = var.metal_auth_token
 }
 
 module "welcome_workshop" {
   source                   = "../../"
-  workshop_organization_id = var.workshop_organization_id
+  workshop_organization_id = var.metal_organization_id
   workshop_csv_file        = var.workshop_csv_file
   workshop_send_invites    = var.workshop_send_invites
 }

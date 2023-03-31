@@ -9,18 +9,13 @@ terraform {
   }
 }
 
-locals {
-  users = csvdecode(file(var.csv_file))
-}
-
 data "equinix_metal_organization" "org" {
-  organization_id = var.organization_id
+  organization_id = var.metal_organization_id
 }
 
 module "project_invite_setup" {
-  for_each        = { for user in local.users : trimspace(user.email) => user }
-  source          = "../collaborator-project"
-  organization_id = data.equinix_metal_organization.org.id
-  collaborator    = each.value.email
-  send_invites    = var.send_invites
+  for_each       = local.collaborators
+  source         = "../collaborator-project"
+  module_context = local.module_context
+  collaborator   = each.value.email
 }

@@ -1,13 +1,4 @@
-# Collaborator-project
-
-This the collaborator-project module.
-
-## Usage
-
-```bash
-terraform init
-terraform apply
-```
+# Terraform Equinix Labs Collaborator Project Module
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -21,7 +12,7 @@ terraform apply
 
 | Name | Version |
 |------|---------|
-| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | >= 1.10.0 |
+| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | 1.14.1 |
 
 ## Modules
 
@@ -40,8 +31,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_collaborator"></a> [collaborator](#input\_collaborator) | Collaborator email to join the organization | `string` | n/a | yes |
-| <a name="input_organization_id"></a> [organization\_id](#input\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
-| <a name="input_send_invites"></a> [send\_invites](#input\_send\_invites) | Wether Collaborator invitations should be sent. This could be toggled after a successful provision to prevent sending invitations to a project that could be deleted during a reprovision | `bool` | `true` | no |
+| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for Collaborator module | `any` | <pre>{<br>  "send_invites": true<br>}</pre> | no |
+| <a name="input_module_context"></a> [module\_context](#input\_module\_context) | Input context for the module | <pre>object({<br>    organization_id = string<br>  })</pre> | n/a | yes |
 
 ## Outputs
 

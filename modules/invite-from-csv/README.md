@@ -1,13 +1,4 @@
-# Invite-from-csv
-
-This the invite-from-csv module.
-
-## Usage
-
-```bash
-terraform init
-terraform apply
-```
+# Terraform Equinix Labs Invite from CSV Module
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -21,7 +12,7 @@ terraform apply
 
 | Name | Version |
 |------|---------|
-| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | >= 1.10.0 |
+| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | 1.14.1 |
 
 ## Modules
 
@@ -39,11 +30,12 @@ terraform apply
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_organization_id"></a> [organization\_id](#input\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
 | <a name="input_csv_file"></a> [csv\_file](#input\_csv\_file) | Path to a CSV file containing a list of projects to provision: email,metro,plan. Email address is used as the project name and the collaborator. Metro and plan are used to provision the project. | `string` | `"users.csv"` | no |
-| <a name="input_send_invites"></a> [send\_invites](#input\_send\_invites) | Wether Collaborator invitations should be sent. This could be toggled after a successful provision to prevent sending invitations to a project that could be deleted during a reprovision | `bool` | `true` | no |
+| <a name="input_metal_organization_id"></a> [metal\_organization\_id](#input\_metal\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_invite_from_csv_outputs"></a> [invite\_from\_csv\_outputs](#output\_invite\_from\_csv\_outputs) | Outputs of the invite\_from\_csv |
 <!-- END_TF_DOCS -->

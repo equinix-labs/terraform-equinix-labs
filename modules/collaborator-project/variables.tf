@@ -1,15 +1,22 @@
-variable "organization_id" {
-  type        = string
-  description = "Equinix Metal organization id"
+# Module Context
+variable "module_context" {
+  description = "Input context for the module"
+  type = object({
+    organization_id = string
+  })
 }
 
+# Module Config
+variable "module_config" {
+  description = "Module configuration for Collaborator module"
+  type        = any
+  default = {
+    send_invites = true
+  }
+}
+
+# Collaborator
 variable "collaborator" {
   type        = string
   description = "Collaborator email to join the organization"
-}
-
-variable "send_invites" {
-  type        = bool
-  description = "Wether Collaborator invitations should be sent. This could be toggled after a successful provision to prevent sending invitations to a project that could be deleted during a reprovision"
-  default     = true
 }

@@ -15,7 +15,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | 1.14.1 |
+| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | >= 1.10.0 |
 | <a name="provider_local"></a> [local](#provider\_local) | 2.4.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.4.3 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 4.0.4 |
@@ -42,8 +42,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for Metal module | <pre>object({<br>    device_count  = number<br>    os            = string<br>    billing_cycle = string<br>    cluster_name  = string<br>    device_type   = string<br>  })</pre> | <pre>{<br>  "billing_cycle": "hourly",<br>  "cluster_name": "metal-cluster",<br>  "device_count": 1,<br>  "device_type": "m3.small.x86",<br>  "os": "ubuntu_20_04"<br>}</pre> | no |
 | <a name="input_module_context"></a> [module\_context](#input\_module\_context) | Input context for the module | <pre>object({<br>    project_id = string<br>    metro      = string<br>    tags       = list(string)<br>  })</pre> | n/a | yes |
+| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for Metal module | <pre>object({<br>    device_count  = number<br>    os            = string<br>    billing_cycle = string<br>    cluster_name  = string<br>    device_type   = string<br>  })</pre> | <pre>{<br>  "billing_cycle": "hourly",<br>  "cluster_name": "metal-cluster",<br>  "device_count": 1,<br>  "device_type": "m3.small.x86",<br>  "os": "ubuntu_20_04"<br>}</pre> | no |
 
 ## Outputs
 

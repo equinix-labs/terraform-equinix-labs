@@ -25,8 +25,8 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for EKSA module | <pre>object({<br>    cluster_name        = string<br>    cp_device_count     = number<br>    worker_device_count = number<br>  })</pre> | <pre>{<br>  "cluster_name": "eksa-workshop-cluster",<br>  "cp_device_count": 1,<br>  "worker_device_count": 1<br>}</pre> | no |
 | <a name="input_module_context"></a> [module\_context](#input\_module\_context) | Input context for the module | <pre>object({<br>    metal_api_token = string<br>    project_id      = string<br>    metro           = string<br>    tags            = list(string)<br>  })</pre> | n/a | yes |
+| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for EKSA module | <pre>object({<br>    cluster_name        = string<br>    cp_device_count     = number<br>    worker_device_count = number<br>  })</pre> | <pre>{<br>  "cluster_name": "eksa-workshop-cluster",<br>  "cp_device_count": 1,<br>  "worker_device_count": 1<br>}</pre> | no |
 
 ## Outputs
 

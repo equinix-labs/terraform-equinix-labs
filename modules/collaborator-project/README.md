@@ -12,7 +12,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | 1.14.1 |
+| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | >= 1.10.0 |
 
 ## Modules
 
@@ -31,8 +31,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_collaborator"></a> [collaborator](#input\_collaborator) | Collaborator email to join the organization | `string` | n/a | yes |
-| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for Collaborator module | `any` | <pre>{<br>  "send_invites": true<br>}</pre> | no |
 | <a name="input_module_context"></a> [module\_context](#input\_module\_context) | Input context for the module | <pre>object({<br>    organization_id = string<br>  })</pre> | n/a | yes |
+| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for Collaborator module | `any` | <pre>{<br>  "send_invites": true<br>}</pre> | no |
 
 ## Outputs
 

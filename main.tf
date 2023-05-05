@@ -3,6 +3,10 @@ terraform {
   required_version = ">= 1.3"
 }
 
+# ---------------------------------------------------------------------------------------------------------------------
+# Project Setup
+# ---------------------------------------------------------------------------------------------------------------------
+
 # Setup Project for deploying metal or EKSA
 module "project_setup" {
   count                 = var.enable_workshop_setup ? 1 : 0
@@ -10,7 +14,11 @@ module "project_setup" {
   metal_organization_id = var.metal_organization_id
 }
 
-# Deploy the metal module if platform of choice is metal
+# ---------------------------------------------------------------------------------------------------------------------
+# Platforms
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Deploy the metal module if platform of choice is Metal
 module "deploy_metal" {
   count  = var.enable_metal ? 1 : 0
   source = "./modules/metal"
@@ -19,7 +27,7 @@ module "deploy_metal" {
   module_config  = var.metal_config
 }
 
-# Deploy the eksa module if platform of choice is eksa
+# Deploy the eksa module if platform of choice is EKSA
 module "deploy_eksa" {
   count  = var.enable_eksa ? 1 : 0
   source = "./modules/eksa"

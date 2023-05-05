@@ -1,6 +1,6 @@
 # Terraform Equinix Labs Metal Module
 
-This module deploys bare metal machines as a cluster.
+This module provisions a cluster of bare metal machines, VLAN, gateway, and an SSH key for users to SSH into the provisioned bare metal machines.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

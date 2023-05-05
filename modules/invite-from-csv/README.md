@@ -1,6 +1,6 @@
 # Terraform Equinix Labs Invite from CSV Module
 
-This module will loop over every user provided in the users.csv file and call the [collaborator-project](../collaborator-project/) module to create a project.
+This module reads a given filename `users.csv`, identifies each user entry in the file, then calls [collaborator-project](../collaborator-project/) module to create a project for them.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

@@ -1,6 +1,6 @@
 # Terraform Equinix Labs EKSA Setup Example
 
-This is an example of how to utilize the root module to deploy the [eksa](../../modules/eksa/) module.
+This is an example of how to utilize the root module to deploy the [invite-from-csv](https://github.com/equinix-labs/terraform-equinix-labs/tree/main/modules/invite-from-csv) module and the [eksa](https://github.com/equinix-labs/terraform-equinix-labs/tree/main/modules/eksa) module. In this example, each user identified in the `users.csv` file (see users.csv.example) will have a project provisioned and an invitation sent by email to join that project. Kubernetes will then be provisioned into each user's project with the configurations set within the [variables.tf](./variables.tf) file.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

@@ -14,5 +14,4 @@ module "eksa" {
   cluster_name        = var.module_config.cluster_name
   cp_device_count     = var.module_config.cp_device_count
   worker_device_count = var.module_config.worker_device_count
-
 }

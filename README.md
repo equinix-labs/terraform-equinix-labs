@@ -4,13 +4,11 @@
 [![run-pre-commit-hooks](https://github.com/equinix-labs/terraform-equinix-labs/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/equinix-labs/terraform-equinix-labs/actions/workflows/pre-commit.yaml)
 [![generate-terraform-docs](https://github.com/equinix-labs/terraform-equinix-labs/actions/workflows/documentation.yaml/badge.svg)](https://github.com/equinix-labs/terraform-equinix-labs/actions/workflows/documentation.yaml)
 
-This repository contains a collection of Terraform modules to help automate the deployment and management of both baremetal and [Kubernetes (EKS-A)](https://github.com/equinix-labs/terraform-equinix-metal-eks-anywhere) environments running on [Equinix Metal](https://deploy.equinix.com/).
-
-Visit [EKS-A Baremetal on Equinix Metal](https://github.com/equinix-labs/terraform-equinix-metal-eks-anywhere) for more info on EKS-A on baremetal.
+This repository contains a collection of Terraform modules to help automate the deployment and management of either bare metal nodes or a kubernetes cluster environment running on [Equinix Metal](https://deploy.equinix.com/).
 
 ## Usage
 
-This project is intended to be used as a Terraform module. It may also be forked, cloned, or downloaded and modified as needed as the base in your integrations and deployments. Module [invite-from-csv](./modules/invite-from-csv/) may be enabled mutually exclusively.
+This project is intended to be used as a Terraform module. It may also be forked, cloned, or downloaded and modified as needed as the base in your integrations and deployments.
 
 Prerequesites:
 
@@ -20,7 +18,12 @@ Prerequesites:
 
 ## Examples
 
-Check out [examples](./examples/) directory for examples on how to utilize this module.
+This project may be deployed into new project(s) or existing project(s). Check out sample deployments in the [examples](./examples/) directory described as follows:
+
+| Name | Description |
+|------|---------|
+| [eksa-setup](./examples/eksa-setup/) | Deploys a AWS EKS-A cluster into new projects provisioned for each user described in users.csv  |
+| [metal-setup](./examples/metal-setup/) | Deploys a cluster or bare nodes into new projects provisioned for each user described in users.csv  |
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -68,3 +71,10 @@ No resources.
 | <a name="output_deploy_metal_outputs"></a> [deploy\_metal\_outputs](#output\_deploy\_metal\_outputs) | Outputs of the Deploy Metal module |
 | <a name="output_project_setup_outputs"></a> [project\_setup\_outputs](#output\_project\_setup\_outputs) | Outputs of the Project Setup module |
 <!-- END_TF_DOCS -->
+## Contributing
+
+If you would like to contribute to this module, see [CONTRIBUTING](CONTRIBUTING.md) page for more info.
+
+## License
+
+Apache License, Version 2.0. See [LICENSE](LICENSE).

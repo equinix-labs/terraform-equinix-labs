@@ -1,5 +1,7 @@
 # Terraform Equinix Labs Invite from CSV Module
 
+This module reads a given filename `users.csv`, identifies each user entry in the file, then calls [collaborator-project](../collaborator-project/) module to create a project for them.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -12,7 +14,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | >= 1.10.0 |
+| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | 1.14.1 |
 
 ## Modules
 
@@ -30,8 +32,8 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_metal_organization_id"></a> [metal\_organization\_id](#input\_metal\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
 | <a name="input_csv_file"></a> [csv\_file](#input\_csv\_file) | Path to a CSV file containing a list of projects to provision: email,metro,plan. Email address is used as the project name and the collaborator. Metro and plan are used to provision the project. | `string` | `"users.csv"` | no |
+| <a name="input_metal_organization_id"></a> [metal\_organization\_id](#input\_metal\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
 
 ## Outputs
 

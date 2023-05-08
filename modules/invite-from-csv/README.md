@@ -14,7 +14,7 @@ This module reads a given filename `users.csv`, identifies each user entry in th
 
 | Name | Version |
 |------|---------|
-| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | 1.14.1 |
+| <a name="provider_equinix"></a> [equinix](#provider\_equinix) | >= 1.10.0 |
 
 ## Modules
 
@@ -32,8 +32,8 @@ This module reads a given filename `users.csv`, identifies each user entry in th
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_csv_file"></a> [csv\_file](#input\_csv\_file) | Path to a CSV file containing a list of projects to provision: email,metro,plan. Email address is used as the project name and the collaborator. Metro and plan are used to provision the project. | `string` | `"users.csv"` | no |
 | <a name="input_metal_organization_id"></a> [metal\_organization\_id](#input\_metal\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
+| <a name="input_csv_file"></a> [csv\_file](#input\_csv\_file) | Path to a CSV file containing a list of projects to provision: email,metro,plan. Email address is used as the project name and the collaborator. Metro and plan are used to provision the project. | `string` | `"users.csv"` | no |
 
 ## Outputs
 

@@ -15,13 +15,21 @@ provider "equinix" {
   auth_token = var.metal_auth_token
 }
 
+# Setup the workshop
+module "workshop_setup" {
+  enable_workshop_setup = var.enable_workshop_setup
+  source                = "../../"
+  metal_organization_id = var.metal_organization_id
+  metal_auth_token      = var.metal_auth_token
+}
+
 # Deploy the EKSA module if platform of choice is EKSA
 module "deploy_eksa" {
-  for_each              = { for k, v in var.metal_project_ids : k => v if var.enable_eksa }
+  for_each              = { for k, v in module.workshop_setup.project_setup_outputs[0].invite_from_csv_outputs : k => v if var.enable_eksa }
   enable_eksa           = var.enable_eksa
   source                = "../../"
   metal_organization_id = var.metal_organization_id
   metal_auth_token      = var.metal_auth_token
-  metal_project_id      = each.value
+  metal_project_id      = each.value.collaborator_project_id
   eksa_config           = var.eksa_config
 }

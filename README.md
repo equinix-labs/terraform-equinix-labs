@@ -10,11 +10,20 @@ This repository contains a collection of Terraform modules to help automate the 
 
 This project is intended to be used as a Terraform module. It may also be forked, cloned, or downloaded and modified as needed as the base in your integrations and deployments.
 
-Prerequesites:
+Prerequisites:
 
 * A valid Equinix Metal organization ID, API token, and/or project ID.
 * HashiCorp Terraform installed. Please see [tfenv](https://github.com/tfutils/tfenv) util.
-* Optional [metal-cli](https://github.com/equinix/metal-cli/#installation) installation.
+
+Optional:
+
+* Install [pre-commit](https://pre-commit.com/#install) with its prerequisites: [python](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python) and [pip](https://pip.pypa.io/en/stable/installation/).
+* Install required packages: [tflint](https://github.com/terraform-linters/tflint), [tfsec](https://aquasecurity.github.io/tfsec/v1.0.11/getting-started/installation/), [shfmt](https://github.com/mvdan/sh), [shellcheck](https://github.com/koalaman/shellcheck), and [markdownlint](https://github.com/markdownlint/markdownlint).
+* Install [metal-cli](https://github.com/equinix/metal-cli/#installation).
+
+To initialize pre-commit: `pre-commit install`.
+
+Run `terraform init -upgrade` and `terraform apply`.
 
 ## Examples
 

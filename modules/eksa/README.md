@@ -17,7 +17,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_eksa"></a> [eksa](#module\_eksa) | equinix-labs/metal-eks-anywhere/equinix | 0.5.0 |
+| <a name="module_eksa"></a> [eksa](#module\_eksa) | equinix-labs/metal-eks-anywhere/equinix | 0.6.0 |
 
 ## Resources
 

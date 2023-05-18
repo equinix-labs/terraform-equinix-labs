@@ -5,7 +5,7 @@ terraform {
 # Module block to call EKSA module
 module "eksa" {
   source  = "equinix-labs/metal-eks-anywhere/equinix"
-  version = "0.5.0"
+  version = "0.6.0"
 
   metal_api_token     = var.module_context.metal_api_token
   project_id          = var.module_context.project_id

@@ -22,8 +22,10 @@ This project may be deployed into new project(s) or existing project(s). Check o
 
 | Name | Description |
 |------|---------|
-| [eksa-setup](./examples/eksa-setup/) | Deploys a AWS EKS-A cluster into new projects provisioned for each user described in users.csv  |
-| [metal-setup](./examples/metal-setup/) | Deploys a cluster or bare nodes into new projects provisioned for each user described in users.csv  |
+| [eksa-setup](./examples/eksa-setup/) | Deploys a AWS EKS-A cluster into existing projects  |
+| [eksa-setup-new](./examples/eksa-setup-new/) | Deploys a AWS EKS-A cluster into new projects provisioned for each user described in users.csv  |
+| [metal-setup](./examples/metal-setup/) | Deploys a cluster or bare nodes into existing projects  |
+| [metal-setup-new](./examples/metal-setup-new/) | Deploys a cluster or bare nodes into new projects provisioned for each user described in users.csv  |
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements

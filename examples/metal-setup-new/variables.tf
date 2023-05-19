@@ -10,10 +10,10 @@ variable "metal_organization_id" {
   description = "Equinix Metal organization id"
 }
 
-variable "metal_project_ids" {
-  description = "Project IDs to deploy Metal into"
-  type        = list(string)
-  default     = []
+variable "enable_workshop_setup" {
+  type        = bool
+  description = "Enable Workshop Setup module"
+  default     = true
 }
 
 variable "enable_metal" {

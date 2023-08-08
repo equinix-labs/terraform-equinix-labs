@@ -1,4 +1,4 @@
-# Module Deploy Metal Outputs
+# Module Deploy EKSA Outputs
 output "deploy_eksa_outputs" {
   description = "Outputs of the Deploy EKSA module"
 

@@ -5,7 +5,6 @@ output "project_setup_outputs" {
   value = { for k, v in module.project_setup : k => v }
 }
 
-
 # Module Deploy Metal Outputs
 output "deploy_metal_outputs" {
   description = "Outputs of the Deploy Metal module"
@@ -18,4 +17,11 @@ output "deploy_eksa_outputs" {
   description = "Outputs of the Deploy EKSA module"
 
   value = { for k, v in var.metal_config : k => v }
+}
+
+# Module Deploy K3s Outputs
+output "deploy_k3s_outputs" {
+  description = "Outputs of the Deploy K3s module"
+
+  value = { for k, v in var.k3s_config : k => v }
 }

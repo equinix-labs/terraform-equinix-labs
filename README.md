@@ -66,6 +66,8 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_metal_auth_token"></a> [metal\_auth\_token](#input\_metal\_auth\_token) | Equinix Metal user api token. | `string` | n/a | yes |
+| <a name="input_metal_organization_id"></a> [metal\_organization\_id](#input\_metal\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
 | <a name="input_eksa_config"></a> [eksa\_config](#input\_eksa\_config) | Module configuration for EKSA module | <pre>object({<br>    cluster_name        = string<br>    cp_device_count     = number<br>    worker_device_count = number<br>  })</pre> | <pre>{<br>  "cluster_name": "equinix-labs-cluster",<br>  "cp_device_count": 3,<br>  "worker_device_count": 3<br>}</pre> | no |
 | <a name="input_enable_eksa"></a> [enable\_eksa](#input\_enable\_eksa) | Enable EKSA module | `bool` | `false` | no |
 | <a name="input_enable_k3s"></a> [enable\_k3s](#input\_enable\_k3s) | Enable K3s module | `bool` | `false` | no |
@@ -73,10 +75,8 @@ No resources.
 | <a name="input_enable_workshop_setup"></a> [enable\_workshop\_setup](#input\_enable\_workshop\_setup) | Enable Workshop Setup module | `bool` | `false` | no |
 | <a name="input_global_ip"></a> [global\_ip](#input\_global\_ip) | Enables a global anycast IPv4 that will be shared for all clusters in all metros | `bool` | `false` | no |
 | <a name="input_k3s_config"></a> [k3s\_config](#input\_k3s\_config) | Module configuration for K3s module | <pre>list(object({<br>    name                    = string<br>    metro                   = string<br>    plan_control_plane      = string<br>    plan_node               = string<br>    node_count              = number<br>    k3s_ha                  = bool<br>    os                      = string<br>    control_plane_hostnames = string<br>    node_hostnames          = string<br>    custom_k3s_token        = string<br>    ip_pool_count           = number<br>    k3s_version             = string<br>    metallb_version         = string<br>  }))</pre> | <pre>[<br>  {<br>    "control_plane_hostnames": "k3s-cp",<br>    "custom_k3s_token": "",<br>    "ip_pool_count": 1,<br>    "k3s_ha": true,<br>    "k3s_version": "",<br>    "metallb_version": "",<br>    "metro": "SV",<br>    "name": "k3s-cluster",<br>    "node_count": 3,<br>    "node_hostnames": "k3s-node",<br>    "os": "debian_11",<br>    "plan_control_plane": "c3.small.x86",<br>    "plan_node": "c3.small.x86"<br>  }<br>]</pre> | no |
-| <a name="input_metal_auth_token"></a> [metal\_auth\_token](#input\_metal\_auth\_token) | Equinix Metal user api token. | `string` | n/a | yes |
 | <a name="input_metal_config"></a> [metal\_config](#input\_metal\_config) | Configuration for Metal module | <pre>object({<br>    device_count  = number<br>    os            = string<br>    billing_cycle = string<br>    cluster_name  = string<br>    device_type   = string<br>  })</pre> | <pre>{<br>  "billing_cycle": "hourly",<br>  "cluster_name": "metal-cluster",<br>  "device_count": 3,<br>  "device_type": "m3.small.x86",<br>  "os": "ubuntu_20_04"<br>}</pre> | no |
 | <a name="input_metal_metro"></a> [metal\_metro](#input\_metal\_metro) | Equinix Metal metro | `string` | `"sv"` | no |
-| <a name="input_metal_organization_id"></a> [metal\_organization\_id](#input\_metal\_organization\_id) | Equinix Metal organization id | `string` | n/a | yes |
 | <a name="input_metal_project_id"></a> [metal\_project\_id](#input\_metal\_project\_id) | Project ID | `string` | `""` | no |
 | <a name="input_metal_tags"></a> [metal\_tags](#input\_metal\_tags) | String list of common tags for Equinix resources | `list(string)` | <pre>[<br>  "terraform",<br>  "equinix-labs"<br>]</pre> | no |
 

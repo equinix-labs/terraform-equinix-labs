@@ -35,3 +35,12 @@ module "deploy_eksa" {
   module_context = local.module_context
   module_config  = var.eksa_config
 }
+
+# Deploy the K3s module if platform of choice is K3s
+module "deploy_k3s" {
+  count  = var.enable_k3s ? 1 : 0
+  source = "./modules/k3s"
+
+  module_context = local.module_context
+  module_config  = var.k3s_config
+}

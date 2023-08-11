@@ -80,3 +80,50 @@ variable "eksa_config" {
     worker_device_count = 3
   }
 }
+
+# Variables for "K3s" module
+variable "global_ip" {
+  type        = bool
+  description = "Enables a global anycast IPv4 that will be shared for all clusters in all metros"
+  default     = false
+}
+
+variable "enable_k3s" {
+  type        = bool
+  description = "Enable K3s module"
+  default     = false
+}
+
+variable "k3s_config" {
+  description = "Module configuration for K3s module"
+  type = list(object({
+    name                    = string
+    metro                   = string
+    plan_control_plane      = string
+    plan_node               = string
+    node_count              = number
+    k3s_ha                  = bool
+    os                      = string
+    control_plane_hostnames = string
+    node_hostnames          = string
+    custom_k3s_token        = string
+    ip_pool_count           = number
+    k3s_version             = string
+    metallb_version         = string
+  }))
+  default = [{
+    name                    = "k3s-cluster"
+    metro                   = "SV"
+    plan_control_plane      = "c3.small.x86"
+    plan_node               = "c3.small.x86"
+    node_count              = 3
+    k3s_ha                  = true
+    os                      = "debian_11"
+    control_plane_hostnames = "k3s-cp"
+    node_hostnames          = "k3s-node"
+    custom_k3s_token        = ""
+    ip_pool_count           = 1
+    k3s_version             = ""
+    metallb_version         = ""
+  }]
+}

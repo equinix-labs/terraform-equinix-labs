@@ -11,6 +11,11 @@ terraform {
 
 resource "equinix_metal_project" "project" {
   name = replace(var.collaborator, "@", "-")
+  bgp_config {
+    deployment_type = var.bgp_deployment_type
+    md5             = var.bgp_md5_hash
+    asn             = var.bgp_asn
+  }
 }
 
 resource "equinix_metal_project_api_key" "project_key" {

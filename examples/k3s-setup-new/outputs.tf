@@ -5,9 +5,9 @@ output "workshop_setup_outputs" {
   value = { for k, v in module.workshop_setup.project_setup_outputs : k => v }
 }
 
-# Module Deploy EKSA Outputs
-output "deploy_eksa_outputs" {
-  description = "Outputs of the Deploy EKSA module"
+# Module Deploy K3s Outputs
+output "deploy_k3s_outputs" {
+  description = "Outputs of the Deploy K3s module"
 
-  value = { for k, v in var.eksa_config : k => v }
+  value = { for k, v in var.k3s_config : k => v }
 }

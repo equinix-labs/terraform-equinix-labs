@@ -34,6 +34,9 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_collaborator"></a> [collaborator](#input\_collaborator) | Collaborator email to join the organization | `string` | n/a | yes |
 | <a name="input_module_context"></a> [module\_context](#input\_module\_context) | Input context for the module | <pre>object({<br>    organization_id = string<br>  })</pre> | n/a | yes |
+| <a name="input_bgp_asn"></a> [bgp\_asn](#input\_bgp\_asn) | BGP asn | `number` | `65000` | no |
+| <a name="input_bgp_deployment_type"></a> [bgp\_deployment\_type](#input\_bgp\_deployment\_type) | BGP deployment type | `string` | `"local"` | no |
+| <a name="input_bgp_md5_hash"></a> [bgp\_md5\_hash](#input\_bgp\_md5\_hash) | BGP md5 hash key | `string` | `"54190397c4d8086bf35D"` | no |
 | <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for Collaborator module | `any` | <pre>{<br>  "send_invites": true<br>}</pre> | no |
 
 ## Outputs

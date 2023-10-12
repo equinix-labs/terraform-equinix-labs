@@ -25,3 +25,10 @@ output "deploy_k3s_outputs" {
 
   value = { for k, v in var.k3s_config : k => v }
 }
+
+# Module Deploy k8s Outputs
+output "deploy_k8s_outputs" {
+  description = "Outputs of the Deploy k8s module"
+
+  value = { for k, v in var.k8s_config : k => v }
+}

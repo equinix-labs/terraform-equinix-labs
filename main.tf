@@ -44,3 +44,12 @@ module "deploy_k3s" {
   module_context = local.module_context
   module_config  = var.k3s_config
 }
+
+# Deploy the k8s module if platform of choice is K8s
+module "deploy_k8s" {
+  count  = var.enable_k8s ? 1 : 0
+  source = "./modules/k8s"
+
+  module_context = local.module_context
+  module_config  = var.k8s_config
+}

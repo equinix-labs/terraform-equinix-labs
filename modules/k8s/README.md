@@ -27,8 +27,8 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for k8s module | <pre>object({<br>    kube_vip_version     = string<br>    kubernetes_version   = string<br>    ssh_private_key_path = string<br>    cp_ha                = bool<br>    worker_host_count    = number<br>  })</pre> | <pre>{<br>  "cp_ha": true,<br>  "kube_vip_version": "v0.6.2",<br>  "kubernetes_version": "v1.27.5",<br>  "ssh_private_key_path": "",<br>  "worker_host_count": 1<br>}</pre> | no |
 | <a name="input_module_context"></a> [module\_context](#input\_module\_context) | Input context for the module | <pre>object({<br>    metal_api_token = string<br>    project_id      = string<br>    metro           = string<br>    tags            = list(string)<br>  })</pre> | n/a | yes |
+| <a name="input_module_config"></a> [module\_config](#input\_module\_config) | Module configuration for k8s module | <pre>object({<br>    kube_vip_version     = string<br>    kubernetes_version   = string<br>    ssh_private_key_path = string<br>    cp_ha                = bool<br>    worker_host_count    = number<br>  })</pre> | <pre>{<br>  "cp_ha": true,<br>  "kube_vip_version": "v0.6.2",<br>  "kubernetes_version": "v1.27.5",<br>  "ssh_private_key_path": "",<br>  "worker_host_count": 1<br>}</pre> | no |
 
 ## Outputs
 

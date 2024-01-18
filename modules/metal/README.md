@@ -10,7 +10,7 @@ This module provisions a cluster of bare metal machines, VLAN, gateway, and an S
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
 | <a name="requirement_equinix"></a> [equinix](#requirement\_equinix) | >= 1.10.0 |
 | <a name="requirement_local"></a> [local](#requirement\_local) | 2.4.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | 3.5.1 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | 3.6.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.4 |
 
 ## Providers
@@ -19,7 +19,7 @@ This module provisions a cluster of bare metal machines, VLAN, gateway, and an S
 |------|---------|
 | <a name="provider_equinix"></a> [equinix](#provider\_equinix) | >= 1.10.0 |
 | <a name="provider_local"></a> [local](#provider\_local) | 2.4.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.6.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 4.0.4 |
 
 ## Modules
@@ -36,8 +36,8 @@ No modules.
 | [equinix_metal_ssh_key.ssh_pub_key](https://registry.terraform.io/providers/equinix/equinix/latest/docs/resources/metal_ssh_key) | resource |
 | [equinix_metal_vlan.provisioning_vlan](https://registry.terraform.io/providers/equinix/equinix/latest/docs/resources/metal_vlan) | resource |
 | [local_file.ssh_private_key](https://registry.terraform.io/providers/hashicorp/local/2.4.0/docs/resources/file) | resource |
-| [random_string.resource_suffix](https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/string) | resource |
-| [random_string.ssh_key_suffix](https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/string) | resource |
+| [random_string.resource_suffix](https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/string) | resource |
+| [random_string.ssh_key_suffix](https://registry.terraform.io/providers/hashicorp/random/3.6.0/docs/resources/string) | resource |
 | [tls_private_key.ssh_key_pair](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key) | resource |
 
 ## Inputs

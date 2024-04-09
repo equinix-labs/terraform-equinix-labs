@@ -2,11 +2,11 @@
 
 - Install jq if you don't have it already
 
-https://jqlang.github.io/jq/download/
+<https://jqlang.github.io/jq/download/>
 
 - Install git if you don't have it already
 
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+<https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
 
 ```sh
 git clone https://github.com/cprivitere/terraform-gcpartner-anthos-baremetal
@@ -14,7 +14,7 @@ git clone https://github.com/cprivitere/terraform-gcpartner-anthos-baremetal
 
 - Install Terraform if you don't have it already
 
-https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli
+<https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli>
 
 ```sh
 cd terraform-gcpartner-anthos-baremetal
@@ -23,7 +23,7 @@ terraform init -upgrade
 
 - Install Gcloud CLI if you dont' have it already
 
-https://cloud.google.com/sdk/docs/install
+<https://cloud.google.com/sdk/docs/install>
 
 - do a gcloud init and set it up to connect your GCP project
 - Edit the terraform.tfvars file to have your API key and Project ID
@@ -38,7 +38,7 @@ export KUBECONFIG=~/anthos.kubeconfig
 
 - Install kubectl if you don't have it already
 
-https://kubernetes.io/docs/tasks/tools/
+<https://kubernetes.io/docs/tasks/tools/>
 
 - Validate the cluster is working
 
@@ -50,7 +50,7 @@ kubectl patch storageclass local-shared -p '{"metadata":{"annotations":{"storage
 
 - Install Helm if you don't have it already
 
-https://helm.sh/docs/intro/install/
+<https://helm.sh/docs/intro/install/>
 
 ```sh
 git clone https://github.com/open-webui/open-webui/
@@ -62,7 +62,7 @@ kubectl get ingress open-webui
 
 - You may need to wait a while for the ingress to be ready, just wait until the Address field has an IP address in it.
 
-- Open a web browser and go to that IP address, using normal http (no https): http://IPADDRESSFROMLASTSTEP
+- Open a web browser and go to that IP address, using normal http (no https): <http://IPADDRESSFROMLASTSTEP>
 
 - It may say no route to upstream while the webui is starting up, just keep refreshing until it works
 

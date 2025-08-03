@@ -5,7 +5,7 @@ terraform {
 # Module block to call k8s module
 module "k8s" {
   source  = "equinix-labs/kubernetes-cluster/equinix"
-  version = "0.2.1"
+  version = "0.3.0"
 
   metal_auth_token = var.module_context.metal_api_token
   metal_project_id = var.module_context.project_id
